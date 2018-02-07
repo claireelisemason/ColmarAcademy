@@ -85,7 +85,7 @@ header .logo {
   flex-grow: 1;
 }
 
-.full li {
+li {
   list-style: none;
   padding-left: 1rem;
 }
@@ -98,6 +98,50 @@ header .logo {
 .full a:hover {
   font-weight: 600;
   color: rgb(16, 30, 90);
+}
+
+.navigation .mobile {
+  display: none;
+}
+
+@media only screen and (max-width:700px){
+  .navigation .mobile {
+    display: flex;
+  }
+
+
+  .navigation .full {
+      display: none;
+    }
+  }
+
+@media only screen and (max-width:700px) and (min-width: 480px){
+  #mini-logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header .logo {
+    display: none;
+  }
+
+  .navigation {
+    width: 100%;
+    padding: 0;
+  }
+
+  ul {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    padding: 0;
+  }
 }
 
 /* Main Banner */
@@ -146,6 +190,26 @@ header .logo {
 .side-content .button:hover {
   background-color: rgb(93, 128, 182);
   color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .flex-content {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+ }
+
+  .flex-content .main-content {
+     width: 100%;
+     padding: 0;
+   }
+
+   .side-content.large {
+     width: 80%;
+     padding: 2rem 1rem;
+   }
+
+
 }
 
 /* Second Banner */
@@ -206,6 +270,10 @@ header .logo {
   padding: 1rem;
 }
 
+#mobile-info {
+  display: none;
+}
+
 .side-content.small {
   width: 65%;
   padding-right: 1.5rem;
@@ -218,6 +286,41 @@ header .logo {
 
 .side-content a:hover {
   color: rgb(16, 30, 90);
+}
+
+@media only screen and (max-width: 800px) {
+  #information .main-content {
+    display: none;
+  }
+
+  #information .side-flexbox {
+    width: 100%;
+  }
+
+  .info-block {
+    flex-direction: column;
+  }
+
+  .info-block .img-container {
+    width: 100%;
+  }
+
+
+
+  #desk-info {
+    display: none;
+  }
+
+  #mobile-info {
+    display: block;
+  }
+
+  .side-content.small {
+    width: 90%;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 /* Start Learning */
@@ -278,10 +381,48 @@ header .logo {
   color: rgb(93, 128, 182);
 }
 
+.mobile-subject-tiles {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .study-areas .flex-container {
+    display: none;
+  }
+
+  .mobile-subject-tiles {
+    display: block;
+    padding: 0;
+  }
+
+  .mobile-subject-tiles li {
+    background-color: rgb(16, 30, 90);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+
+
+
+
+
 /* Thesis Exhibit */
 
 #sample-work {
   background-color: white;
+}
+
+#sample-work h1 {
+  text-align: center;
+  color: rgb(16, 30, 90);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 #sample-work h4 {
@@ -292,6 +433,23 @@ header .logo {
 #para {
   padding-top: 1rem;
 }
+
+@media only screen and (max-width: 800px) {
+
+  #sample-work .main-content {
+    padding-bottom: 1.5rem;
+  }
+
+  #vid-description {
+    display: none;
+  }
+
+  #sample-work .side-flexbox {
+    display: none;
+  }
+}
+
+
 
 /* Footer */
 
@@ -314,4 +472,10 @@ footer .flex-footer {
 
 .flex-footer .legal {
   padding-right: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .flex-footer .legal {
+    display: none;
+  }
 }
