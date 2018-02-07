@@ -11,13 +11,12 @@ body {
 
 .flex-content {
   display: flex;
-  padding: 0 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .flex-content .main-content {
   width: 60%;
   padding: 2rem 1.5rem 2rem 0;
-  border-right: 1px solid lightgray;
 }
 
 .img-container {
@@ -28,13 +27,24 @@ body {
   width: 100%;
 }
 
-.flex-content .side-content {
+.img-container video {
+  width: 100%;
+}
+
+.side-content {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  justify-content: center;
+}
+
+.side-content.large {
+  width: 30%;
   padding: 2rem 0;
 }
 
+a {
+  text-decoration: none;
+}
 
 /* Header */
 
@@ -45,7 +55,7 @@ header {
   width: 100%;
   height: 4rem;
   align-items: center;
-  background-color: white;
+  background-color: rgb(240, 240, 240);
 }
 
 header .logo {
@@ -80,28 +90,27 @@ header .logo {
   padding-left: 1rem;
 }
 
+.full a {
+  color: darkslategrey;
+  text-decoration: none;
+}
+
+.full a:hover {
+  font-weight: 600;
+  color: rgb(16, 30, 90);
+}
+
 /* Main Banner */
 
-.main-banner {
-  position: relative;
-  top: 4rem;
-  width: 100%;
-  margin: 0 auto;
-  background-color: lightgray;
-  display: flex;
-  align-items: center;
-}
-
 #banner {
-  background-color: lightgray;
+  background-color: rgb(173, 201, 224);
   position: relative;
   top: 4rem;
 }
-
 
 .side-content h1,
 .side-content h3 {
-  color: darkslategray;
+  color: rgb(16, 30, 90);
   line-height: 1.5;
 }
 
@@ -117,20 +126,192 @@ header .logo {
   margin-bottom: 2rem;
 }
 
+.side-content h4 {
+  margin-top: 0;
+}
+
+.side-content p {
+  margin-top: 0;
+}
+
 .side-content .button {
   color: white;
   text-align: center;
-  background-color: darkslategray;
+  background-color: rgb(16, 30, 90);
   padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+
+.side-content .button:hover {
+  background-color: rgb(93, 128, 182);
+  color: white;
 }
 
 /* Second Banner */
 
-.second-banner {
-  position:relative;
-  width: 100%;
-  margin: 0 auto;
-  background-color: white;
+#information {
+  position: relative;
+  top: 4rem;
+}
+
+#information h2,
+#information p,
+#information h4 {
+  color: rgb(16, 30, 90);
+}
+
+#information h2 {
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.details {
+  padding-top: 1.5rem;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.citation {
+  padding-top: 1.5rem;
+  margin:0;
+}
+
+#information .citation {
+  font-size: 0.75rem;
+}
+
+.side-flexbox {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-top: 1rem;
+}
+
+.info-block {
   display: flex;
   align-items: center;
+  width: 100%;
+  transition: background-color 400ms ease-in;
+}
+
+.info-block:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+
+.info-block .img-container {
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+.side-content.small {
+  width: 65%;
+  padding-right: 1.5rem;
+}
+
+.side-content a {
+  font-weight: 600;
+  color: rgb(93, 128, 182);
+}
+
+.side-content a:hover {
+  color: rgb(16, 30, 90);
+}
+
+/* Start Learning */
+
+.study-areas {
+  position: relative;
+  top: 4rem;
+  background-color: rgb(240, 240, 240);
+}
+
+.study-areas h1 {
+  text-align: center;
+  color: rgb(16, 30, 90);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 3.5rem 1rem 3.5rem;
+}
+
+.subject-tile {
+  background-color: white;
+  width: 30%;
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+.subject-tile:hover {
+  border-bottom: 2px solid rgb(16, 30, 90);
+}
+
+.subject-tile img{
+  width: 100%;
+}
+
+.tile-text {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tile-text h4 {
+  color: rgb(16, 30, 90);
+  font-weight: 600;
+}
+
+.tile-text p {
+  color: darkslategray;
+}
+
+#courses {
+  color: rgb(93, 128, 182);
+}
+
+/* Thesis Exhibit */
+
+#sample-work {
+  background-color: white;
+}
+
+#sample-work h4 {
+  margin-bottom: 0;
+  color: rgb(16, 30, 90);
+}
+
+#para {
+  padding-top: 1rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(16, 30, 90);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 0.75rem;
+  color: rgb(173, 201, 224);
+}
+
+footer .flex-footer {
+    display: flex;
+  }
+
+.flex-footer .copyright {
+  padding-left: 1.5rem;
+  flex-grow: 1;
+}
+
+.flex-footer .legal {
+  padding-right: 1.5rem;
 }
